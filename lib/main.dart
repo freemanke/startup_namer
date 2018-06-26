@@ -9,8 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Startup Name Generator',
+      title: '名字生成器',
       home: new RandomWords(),
+      theme: new ThemeData(
+        primaryColor: Colors.lightGreen
+      ),
     );
   }
 }
@@ -29,7 +32,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: const Text('Startup Name Generator'),
+        title: const Text('名字生成器'),
         actions: <Widget>[
           new IconButton(icon: const Icon(Icons.list), onPressed: _pushSaved,)
         ],
